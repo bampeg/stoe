@@ -1,0 +1,18 @@
+.nav {
+    height: 60px;
+    width: 100%;
+    background: rgb(50, 50, 50, .2);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: rgb(50, 50, 50);
+    font-size: 20px;
+    /* box-shadow: 0 0 8px 2px rgb(50, 50, 50, .5); */
+}
+
+.nav a:visited {
+    color: rgb(50, 50, 50);
+}
+.nav a:hover {
+    background: gray;
+}
