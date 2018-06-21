@@ -1,14 +1,17 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { css, StyleSheet } from 'aphrodite'
 
-import './Navigation.css'
+import stylesBox from './NavigationStyles.js'
 
 export default function Navigation(props) {
     console.log(props.currentView)
 
+    const styles = StyleSheet.create(stylesBox)
+
     return (
-        <div className="nav">
-            <Link to='/home'>Home</Link>
+        <div className={css(styles.nav)}>
+            <Link to='/'>Home</Link>
             <Link to='/products'>Products</Link>
         </div>
     )
