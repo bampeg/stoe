@@ -1,18 +1,18 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { css, StyleSheet } from 'aphrodite'
+import injectSheet from 'react-jss'
 
-import stylesBox from './NavigationStyles.js'
+import styles from './NavigationStyles.js'
 
-export default function Navigation(props) {
-    console.log(props.currentView)
-
-    const styles = StyleSheet.create(stylesBox)
+function Navigation(props) {
+    const { classes } = props
 
     return (
-        <div className={css(styles.nav)}>
+        <div className={classes.nav}>
             <Link to='/'>Home</Link>
             <Link to='/products'>Products</Link>
         </div>
     )
 }
+
+export default injectSheet(styles)(Navigation)

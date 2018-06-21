@@ -1,21 +1,23 @@
-export default {
+export default theme => ({
     nav: {
         height: '60px',
         width: '100%',
-        background: 'rgb(50, 50, 50, .2)',
         display: 'flex',
         justifyContent: 'space-around',
         alignItems: 'center',
-        color: 'rgb(50, 50, 50)',
+        color: theme.text,
         fontSize: '20px',
-        /* boxShadow: '0 0 8px 2px rgb(50, 50, 50, .5)', */
-        a: {
-            "&:visited": {
-                color: 'rgb(50, 50, 50)',
+        borderBottom: '2px solid ' + theme.border,
+        '& a': {
+            '&:visited': {
+                color: theme.text,
             },
-            "&:hover": {
-                background: 'gray',
+            '&:hover': {
+                color: theme.accent,
             },
         },
+        '@media (max-width: 400px)': {
+
+        },
     },
-}
+})

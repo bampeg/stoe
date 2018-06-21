@@ -1,17 +1,19 @@
 import React from 'react'
-import { css, StyleSheet } from 'aphrodite'
-import productStyles from './ProductStyles'
+import styles from './ProductStyles'
+import injectSheet from 'react-jss'
 
 
-export default function Product(props) {
-    const styles = StyleSheet.create(productStyles)
+function Product(props) {
+    const { classes, product } = props
 
     return (
-        <div className={css(styles.productTile)}>
-            <p>{props.product.name}</p>
-            <p>{props.product.description}</p>
-            <p>${props.product.price}</p>
-            <p>{props.product.rating} stars</p>
+        <div className={classes.productTile} >
+            <p>{product.name}</p>
+            <p>{product.description}</p>
+            <p>${product.price}</p>
+            <p>{product.rating} stars</p>
         </div>
     )
 }
+
+export default injectSheet(styles)(Product)

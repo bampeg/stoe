@@ -1,13 +1,13 @@
 import React from 'react'
-import { css, StyleSheet } from 'aphrodite'
+import injectSheet from 'react-jss'
+import { connect } from 'react-redux'
 
 import Product from '../Product/Product'
-import { connect } from 'react-redux'
 import { dummyProducts } from '../../redux/reducer'
-import stylesBox from './ProductsStyles'
+import styles from './ProductsStyles'
 
-function products(props) {
-    const styles = StyleSheet.create(stylesBox)
+function Products(props) {
+    const { classes } = props
 
     let products = 'Loading...'
     if (props.products.length) {
@@ -17,12 +17,11 @@ function products(props) {
     } else props.dummyProducts()
 
     return (
-        <div className={css(styles.container)}>
+        <div className={classes.container}>
             {products}
         </div>
     )
 }
 
 const mapStateToProps = state => state
-
-export default connect(mapStateToProps, { dummyProducts })(products)
+export default injectSheet(styles)(connect(mapStateToProps, { dummyProducts })(Products))
