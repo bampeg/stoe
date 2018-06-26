@@ -9,7 +9,10 @@ import './index.css'
 
 const theme = {
     text: 'black',
-    accent: '#00B5FF',
+    backgroundGreen: '#007F71',
+    stoeyGreen: '#49C46B',
+    accentGreen: '#ACD7AB',
+    darkGray: '#3D3D3D',
     border: '#D0D0D0',
 }
 
