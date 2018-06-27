@@ -1,17 +1,21 @@
 import React from 'react'
 import injectSheet from 'react-jss'
 import { connect } from 'react-redux'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import styles from './SearchStyles'
 
 function Search(props) {
+
   const { classes } = props
   return (
     <div className={classes.container}>
-      <input 
-        type="text" 
+      <input
+        type="text"
         placeholder="Search" />
-      <button>O</button>
+      <button>
+        <FontAwesomeIcon icon="search" />
+      </button>
     </div>
   )
 }

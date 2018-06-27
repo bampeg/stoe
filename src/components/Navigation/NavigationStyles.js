@@ -1,16 +1,14 @@
 export default theme => ({
-    nav: {
+    container: {
+        background: theme.accentGreen,
         height: '60px',
         width: '100%',
         display: 'flex',
         justifyContent: 'space-around',
         alignItems: 'center',
-        color: theme.text,
-        fontSize: '20px',
-        borderBottom: '2px solid ' + theme.border,
         '& a': {
             '&:visited': {
-                color: theme.text,
+                color: theme.darkGray,
             },
             '&:hover': {
                 color: theme.accent,

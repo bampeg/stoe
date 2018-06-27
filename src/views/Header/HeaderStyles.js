@@ -1,23 +1,24 @@
 export default theme => ({
   container: {
     display: 'flex',
+    // width: '100%',
+    // width: '100%',
     flexDirection: 'column',
     background: theme.backgroundGreen,
     fontSize: '2em',
+    padding: '1em'
   },
-  stoey: {
+  stoeyLogo: {
     display: 'flex',
-    margin: '1em 0 0 1em',
-    '&>h1': {
+    '& p': {
       color: 'white',
+      marginRight: '.1em',
     },
     '& div': {
-      // position: 'relative',
-      // bottom: '0px',
-      // height: 0,
-      marginLeft: '.1em',
+      height: 0,
+      width: 0,
       borderTop: `.7em solid ${theme.stoeyGreen}`,
-      borderRight: `.5em solid rgb(0,0,0,0)`,
-    }
+      borderRight: '.5em solid rgb(0,0,0,0)',
+    },
   },
 })

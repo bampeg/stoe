@@ -8,10 +8,10 @@ function Navigation(props) {
     const { classes } = props
 
     return (
-        <div className={classes.nav}>
+        <nav className={classes.container}>
             <Link to='/'>Home</Link>
             <Link to='/products'>Products</Link>
-        </div>
+        </nav>
     )
 }
 

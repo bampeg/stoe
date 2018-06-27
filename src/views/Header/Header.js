@@ -11,15 +11,15 @@ function Header(props) {
 
 
   return (
-    <div className={classes.container}>
+    <header className={classes.container}>
 
-      <div className={classes.stoey}>
-        <h1>stoe</h1>
+      <section className={classes.stoeyLogo}>
+        <p>stoe</p>
         <div/>
-      </div>
+      </section>
 
       <Search />
-    </div>
+    </header>
   )
 }
 
