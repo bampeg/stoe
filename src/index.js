@@ -3,13 +3,13 @@ import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
 import { ThemeProvider } from 'react-jss'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faSearch } from '@fortawesome/free-solid-svg-icons'
+import { faSearch, faBars } from '@fortawesome/free-solid-svg-icons'
 
 import App from './App'
 import store from './redux/store'
 import './index.css'
 
-library.add(faSearch)
+library.add(faSearch, faBars)
 
 const theme = {
     backgroundGreen: '#007F71',

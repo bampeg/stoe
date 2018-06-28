@@ -7,7 +7,8 @@ export default theme => ({
       fontSize: '.7em',
       width: '100%',
       padding: '2.5%',
-      // boxSizing: 'border-box',
+      borderTopLeftRadius: '3px',
+      borderBottomLeftRadius: '3px',
     },
     '& button': {
       display: 'flex',
@@ -21,8 +22,6 @@ export default theme => ({
         color: theme.darkGray,
         fontSize: '.8em',
         margin: '.4em',
-        // color: theme.accentGreen,
-        // color: theme.backgroundGreen,
       },
     }
   }

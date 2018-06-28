@@ -1,5 +1,6 @@
 import React from 'react'
 import injectSheet from 'react-jss'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import Search from '../../components/Search/Search'
 import styles from './HeaderStyles'
@@ -13,10 +14,13 @@ function Header(props) {
   return (
     <header className={classes.container}>
 
-      <section className={classes.stoeyLogo}>
-        <p>stoe</p>
-        <div/>
-      </section>
+      <div className={classes.top}>
+        <section className={classes.stoeyLogo}>
+          <p>stoe</p>
+          <div />
+        </section>
+        <FontAwesomeIcon icon="bars" />
+      </div>
 
       <Search />
     </header>

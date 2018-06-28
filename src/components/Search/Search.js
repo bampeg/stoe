@@ -13,9 +13,7 @@ function Search(props) {
       <input
         type="text"
         placeholder="Search" />
-      <button>
-        <FontAwesomeIcon icon="search" />
-      </button>
+      <button><FontAwesomeIcon icon="search" /></button>
     </div>
   )
 }
