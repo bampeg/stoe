@@ -17,6 +17,7 @@ const theme = {
     accentGreen: '#ACD7AB',
     darkGray: '#3D3D3D',
     borderGray: '#D0D0D0',
+    sideMargin: '.9em'
 }
 
 ReactDOM.render(

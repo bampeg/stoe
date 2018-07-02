@@ -2,7 +2,7 @@ export default theme => ({
   container: {
     background: theme.backgroundGreen,
     fontSize: '2em',
-    padding: '.9em',
+    padding: '.8em',
     // paddingTop: '.5em',
   },
   top: {
@@ -13,7 +13,7 @@ export default theme => ({
       width: 0,
       borderTop: `.9em solid ${theme.stoeyGreen}`,
       borderRight: '.5em solid rgb(0,0,0,0)',
-      marginTop: '.4em',
+      marginTop: '.35em',
     },
     '& svg': {
       color: 'white',

@@ -7,14 +7,14 @@ import { dummyProducts } from '../../redux/reducer'
 import styles from './ProductsStyles'
 
 function Products(props) {
-    const { classes } = props
+    const { classes, dummyProducts } = props
 
     let products = 'Loading...'
     if (props.products.length) {
         products = props.products.map(product => (
             <Product key={product.id} product={product} />
         ))
-    } else props.dummyProducts()
+    } else dummyProducts()
 
     return (
         <div className={classes.container}>
@@ -22,6 +22,5 @@ function Products(props) {
         </div>
     )
 }
-
 const mapStateToProps = state => state
 export default injectSheet(styles)(connect(mapStateToProps, { dummyProducts })(Products))

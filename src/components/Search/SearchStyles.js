@@ -6,9 +6,9 @@ export default theme => ({
     '& input': {
       fontSize: '.7em',
       width: '100%',
-      padding: '2.5%',
-      borderTopLeftRadius: '3px',
-      borderBottomLeftRadius: '3px',
+      padding: '.7em',
+      borderTopLeftRadius: '2px',
+      borderBottomLeftRadius: '2px',
     },
     '& button': {
       display: 'flex',
@@ -16,12 +16,13 @@ export default theme => ({
       alignItems: 'center',
       background: theme.stoeyGreen,
       borderLeft: `.6em solid ${theme.accentGreen}`,
-      borderTopRightRadius: '3px',
-      borderBottomRightRadius: '3px',
+      borderTopRightRadius: '2px',
+      borderBottomRightRadius: '2px',
+      cursor: 'pointer',
       '& svg': {
         color: theme.darkGray,
         fontSize: '.8em',
-        margin: '.4em',
+        margin: '.4em .5em .4em .5em',
       },
     }
   }

@@ -1,18 +1,31 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import injectSheet from 'react-jss'
+import { connect } from 'react-redux'
 
 import styles from './NavigationStyles.js'
+import { changeTab } from '../../redux/reducer'
 
 function Navigation(props) {
-    const { classes } = props
+    const { classes, changeTab, currentTab } = props
 
     return (
         <nav className={classes.container}>
-            <Link to='/'>Home</Link>
-            <Link to='/products'>Products</Link>
+            <Link
+                className={currentTab === 'home' ? classes.selected : null}
+                onClick={() => changeTab('home')}
+                to='/'>
+                <div>Home</div>
+            </Link>
+            <Link
+                className={currentTab === 'products' ? classes.selected : null}
+                onClick={() => changeTab('products')}
+                to='/products'>
+                <div>Products</div>
+            </Link>
         </nav>
     )
 }
 
-export default injectSheet(styles)(Navigation)
+const mapStateToProps = state => state
+export default injectSheet(styles)(connect(mapStateToProps, { changeTab })(Navigation))

@@ -1,30 +1,30 @@
 const initialState = {
-    currentView: '',
-    products: []
+    currentTab: 'home',
+    tabs: [],
+    products: [],
 }
 
 const
-    CURRENT_VIEW = 'CURRENT_VIEW',
+    CHANGE_TAB = 'CHANGE_TAB',
     DUMMY_PRODUCTS = 'DUMMY_PRODUCTS'
 
 module.exports = {
     reducer: function (state = initialState, action) {
         switch (action.type) {
-            case CURRENT_VIEW:
-                console.log(state)
-                return { ...initialState, currentView: action.payload }
+            case CHANGE_TAB:
+                return { ...state, currentTab: action.payload }
             case DUMMY_PRODUCTS:
-                return { ...initialState, products: action.payload }
+                return { ...state, products: action.payload }
             default:
                 return state
         }
     },
-    currentViewChange: view => (
-        {
-            type: CURRENT_VIEW,
-            payload: view
+    changeTab: function (tab) {
+        return {
+            type: CHANGE_TAB,
+            payload: tab
         }
-    ),
+    },
     dummyProducts: function () {
         return {
             type: DUMMY_PRODUCTS,
@@ -42,7 +42,42 @@ module.exports = {
                     description: 'Does some other really cool stuff.',
                     price: 45,
                     rating: 4.5,
-                }
+                },
+                {
+                    id: 3,
+                    name: 'Thing',
+                    description: 'Does really cool stuff.',
+                    price: 30,
+                    rating: 4,
+                },
+                {
+                    id: 4,
+                    name: 'Thing',
+                    description: 'Does really cool stuff.',
+                    price: 30,
+                    rating: 4,
+                },
+                {
+                    id: 5,
+                    name: 'Thing',
+                    description: 'Does really cool stuff.',
+                    price: 30,
+                    rating: 4,
+                },
+                {
+                    id: 6,
+                    name: 'Thing',
+                    description: 'Does really cool stuff.',
+                    price: 30,
+                    rating: 4,
+                },
+                {
+                    id: 7,
+                    name: 'Thing',
+                    description: 'Does really cool stuff.',
+                    price: 30,
+                    rating: 4,
+                },
             ]
         }
     }

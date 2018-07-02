@@ -10,7 +10,6 @@ import styles from './HeaderStyles'
 function Header(props) {
   const { classes } = props
 
-
   return (
     <header className={classes.container}>
 
