@@ -18,3 +18,8 @@ body {
 html {
     box-sizing: border-box;
 }
+@media (max-width: 165px) {
+    * {
+        display: none;
+    }
+}
