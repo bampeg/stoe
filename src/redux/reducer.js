@@ -1,6 +1,6 @@
 const initialState = {
-    currentTab: 'home',
-    tabs: [],
+    currentTab: 'Home',
+    tabNames: ['Home', 'Products', 'Stuff', 'moStuff', 'anotherTHing', 'maybe'],
     products: [],
 }
 
