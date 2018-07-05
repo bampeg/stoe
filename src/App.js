@@ -1,20 +1,20 @@
 import React, { Component } from 'react'
-import { HashRouter } from 'react-router-dom'
+import { HashRouter, Switch, Route } from 'react-router-dom'
 
-import Header from './views/Header/Header'
-import Navigation from './components/Navigation/Navigation'
-import Routes from './routes'
+import Tabs from './components/Tabs/Tabs'
+import Header from './components/Header/Header'
 
 export default class App extends Component {
   render() {
     return (
-      <HashRouter>
-        <div>
-          <Header />
-          <Navigation />
-          <Routes />
-        </div>
-      </HashRouter>
+      <div>
+        <Header />
+        <HashRouter>
+          <Switch>
+            <Route path={'/:tab'} component={Tabs} />
+          </Switch>
+        </HashRouter>
+      </div>
     )
   }
 } 

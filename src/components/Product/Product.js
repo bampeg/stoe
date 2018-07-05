@@ -1,7 +1,7 @@
 import React from 'react'
-import styles from './ProductStyles'
 import injectSheet from 'react-jss'
 
+import styles from './ProductStyles'
 
 function Product(props) {
     const { classes, product } = props

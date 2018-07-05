@@ -2,7 +2,7 @@ import React from 'react'
 import injectSheet from 'react-jss'
 import { connect } from 'react-redux'
 
-import Product from '../Product/Product'
+import Product from '../../components/Product/Product'
 import { dummyProducts } from '../../redux/reducer'
 import styles from './ProductsStyles'
 
