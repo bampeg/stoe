@@ -1,33 +1,32 @@
 import React from 'react'
-import { Link, Route } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import injectSheet from 'react-jss'
-import { connect } from 'react-redux'
+import { Switch, Route } from 'react-router-dom'
+
 
 import styles from '../Tabs/TabsStyles'
-import { changeTab } from '../../redux/reducer'
 
-// Build tabs and routes from components in ./tabs
+// Automatically build tabs and routes from components
 let paths = require.context('../../tabs', true, /(?<!Styles)\.js$/).keys()
-let tabs = []
+let tabNames = []
 let routes = paths.map((path, i) => {
-  let thisComponent = path.split('/')[1]
-  let correctedPath = path.replace(/^./, '')
-  tabs.push(thisComponent)
+  let component = path.split('/')[1]
+  let componentPath = path.replace(/^./, '')
+  tabNames.push(component)
   return (
     <Route
       exact
       key={i + path}
-      path={`/${thisComponent}`}
-      component={require(`../../tabs${correctedPath}`).default} />
+      path={`/${component}`}
+      component={require(`../../tabs${componentPath}`).default} />
   )
 })
 
-function Navigation(props) {
-  const { classes: { selected, container }, tabNames } = props
+function Navigation({ match, classes: { selected, container } }) {
   let tabs = []
   if (tabNames.length) {
     tabs = tabNames.map((tab, i) => {
-      if (tab === props.match.params.tab) {
+      if (tab === match.params.tab) {
         return (
           <div
             key={`${tab + i}`}
@@ -52,9 +51,17 @@ function Navigation(props) {
       <div className={container}>
         {tabs}
       </div>
-      {routes}
+      <Switch>
+        {routes}
+        <Route
+          path='/'
+          render={props => {
+            props.history.push('/Home')
+            return null
+          }} />
+      </Switch>
     </div>
   )
 }
-const mapStateToProps = state => state
-export default injectSheet(styles)(connect(mapStateToProps, { changeTab })(Navigation))
+
+export default injectSheet(styles)(Navigation)

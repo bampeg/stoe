@@ -12,6 +12,7 @@ export default class App extends Component {
         <HashRouter>
           <Switch>
             <Route path={'/:tab'} component={Tabs} />
+            <Route path={'/'} component={Tabs} />
           </Switch>
         </HashRouter>
       </div>

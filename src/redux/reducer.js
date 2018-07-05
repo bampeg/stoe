@@ -1,31 +1,21 @@
 const initialState = {
-  currentTab: '',
   tabNames: ['Home', 'Products', 'Stuff'],
   products: [],
 }
 
 const
-  CHANGE_TAB = 'CHANGE_TAB',
   DUMMY_PRODUCTS = 'DUMMY_PRODUCTS',
   ADD_TAB_NAMES = 'ADD_TAB_NAMES'
 
 module.exports = {
   reducer: function (state = initialState, action) {
     switch (action.type) {
-      case CHANGE_TAB:
-        return { ...state, currentTab: action.payload }
       case ADD_TAB_NAMES:
         return { ...state, tabNames: action.payload }
       case DUMMY_PRODUCTS:
         return { ...state, products: action.payload }
       default:
         return state
-    }
-  },
-  changeTab: function (tab) {
-    return {
-      type: CHANGE_TAB,
-      payload: tab
     }
   },
   addTabNames: function (tabNames) {
