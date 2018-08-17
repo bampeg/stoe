@@ -8,4 +8,4 @@ export default theme => ({
       gridTemplateColumns: '1fr',
     },
   },
-})
+});

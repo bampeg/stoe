@@ -5,4 +5,4 @@ export default theme => ({
         padding: '10px',
         borderRadius: '2px',
     },
-})
+});

@@ -25,5 +25,5 @@ export default theme => ({
         margin: '.4em .5em .4em .5em',
       },
     }
-  }
-})
+  },
+});

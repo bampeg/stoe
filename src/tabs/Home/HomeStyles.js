@@ -43,5 +43,5 @@ export default theme => ({
     //   border: `.5px solid white`,
     //   borderRadius: '4px 4px 1px 1px',
     // }
-  }
-})
+  },
+});

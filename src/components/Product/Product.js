@@ -1,10 +1,10 @@
-import React from 'react'
-import injectSheet from 'react-jss'
+import React from 'react';
+import injectSheet from 'react-jss';
 
-import styles from './ProductStyles'
+import styles from './ProductStyles';
 
 function Product(props) {
-    const { classes, product } = props
+    const { classes, product } = props;
 
     return (
         <div className={classes.productTile} >
@@ -13,7 +13,7 @@ function Product(props) {
             <p>${product.price}</p>
             <p>{product.rating} stars</p>
         </div>
-    )
-}
+    );
+};
 
-export default injectSheet(styles)(Product)
+export default injectSheet(styles)(Product);

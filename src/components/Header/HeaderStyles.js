@@ -26,5 +26,5 @@ export default theme => ({
       marginRight: '.1em',
       marginBottom: '.3em',
     },
-  }
-})
+  },
+});

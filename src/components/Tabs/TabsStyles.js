@@ -26,5 +26,5 @@ export default theme => ({
     color: theme.darkGray,
     paddingLeft: '.8em',
     paddingRight: '.8em',
-  }
-})
+  },
+});
