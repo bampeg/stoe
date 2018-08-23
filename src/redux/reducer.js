@@ -15,7 +15,7 @@ module.exports = {
       case DUMMY_PRODUCTS:
         return { ...state, products: action.payload };
       default:
-        return state;
+        return state
     }
   },
   addTabNames: function (tabNames) {

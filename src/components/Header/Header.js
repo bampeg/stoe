@@ -20,5 +20,4 @@ function Header(props) {
     </header>
   );
 }
-
 export default injectSheet(styles)(Header);

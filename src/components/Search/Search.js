@@ -6,9 +6,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styles from './SearchStyles';
 
 function Search(props) {
-
   const { classes } = props;
-  
+
   return (
     <div className={classes.container}>
       <input
