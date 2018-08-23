@@ -1,12 +1,12 @@
-import React from 'react'
-import injectSheet from 'react-jss'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import React from 'react';
+import injectSheet from 'react-jss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import Search from '../Search/Search'
-import styles from './HeaderStyles'
+import Search from '../Search/Search';
+import styles from './HeaderStyles';
 
 function Header(props) {
-  const { classes } = props
+  const { classes } = props;
 
   return (
     <header className={classes.container}>
@@ -18,6 +18,7 @@ function Header(props) {
       </div>
       <Search />
     </header>
-  )
+  );
 }
-export default injectSheet(styles)(Header)
+
+export default injectSheet(styles)(Header);

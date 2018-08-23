@@ -1,28 +1,28 @@
 const initialState = {
   tabNames: ['Home', 'Products', 'Stuff'],
   products: [],
-}
+};
 
 const
   DUMMY_PRODUCTS = 'DUMMY_PRODUCTS',
-  ADD_TAB_NAMES = 'ADD_TAB_NAMES'
+  ADD_TAB_NAMES = 'ADD_TAB_NAMES';
 
 module.exports = {
   reducer: function (state = initialState, action) {
     switch (action.type) {
       case ADD_TAB_NAMES:
-        return { ...state, tabNames: action.payload }
+        return { ...state, tabNames: action.payload };
       case DUMMY_PRODUCTS:
-        return { ...state, products: action.payload }
+        return { ...state, products: action.payload };
       default:
-        return state
+        return state;
     }
   },
   addTabNames: function (tabNames) {
     return {
       type: ADD_TAB_NAMES,
       payload: tabNames
-    }
+    };
   },
   dummyProducts: function () {
     return {
@@ -77,7 +77,7 @@ module.exports = {
           price: 30,
           rating: 4,
         },
-      ]
-    }
+      ],
+    };
   }
 }

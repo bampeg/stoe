@@ -24,6 +24,6 @@ export default theme => ({
         fontSize: '.8em',
         margin: '.4em .5em .4em .5em',
       },
-    }
-  }
-})
+    },
+  },
+});
