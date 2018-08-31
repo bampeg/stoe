@@ -1,5 +1,6 @@
 import React from 'react';
 import injectSheet from 'react-jss';
+import StarRatings from 'react-star-ratings';
 
 import styles from './ProductStyles';
 
@@ -11,7 +12,11 @@ function Product(props) {
             <p>{product.name}</p>
             <p>{product.description}</p>
             <p>${product.price}</p>
-            <p>{product.rating} stars</p>
+            <StarRatings
+                starDimension="20px"
+                starSpacing="2.5px"
+                starRatedColor="gold"
+                rating={product.rating} />
         </div>
     );
 }

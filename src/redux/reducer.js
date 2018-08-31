@@ -1,5 +1,5 @@
 const initialState = {
-  tabNames: ['Home', 'Products', 'Stuff'],
+  tabNames: [],
   products: [],
 };
 
@@ -33,7 +33,7 @@ module.exports = {
           name: 'Thing',
           description: 'Does really cool stuff.',
           price: 30,
-          rating: 4,
+          rating: 4.35,
         },
         {
           id: 2,
