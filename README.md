@@ -1,4 +1,2 @@
 # Stoe
-
-## Database
-  
+Welcome to the stoe.
