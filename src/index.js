@@ -4,7 +4,6 @@ import { Provider } from 'react-redux';
 import { ThemeProvider } from 'react-jss';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faSearch, faBars } from '@fortawesome/free-solid-svg-icons';
-import { unregister } from './registerServiceWorker';
 
 import App from './App';
 import store from './redux/store';
@@ -28,4 +27,3 @@ ReactDOM.render(
     </Provider>
   </ThemeProvider>
   , document.getElementById('root'));
-unregister();
