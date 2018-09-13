@@ -9,6 +9,7 @@ const {
   SERVER_PORT
 } = process.env;
 
+app.use( express.static( `${__dirname}/../build` ) );
 app.use(express.json());
 
 app.get('/api/test/:thing', controller.test);
